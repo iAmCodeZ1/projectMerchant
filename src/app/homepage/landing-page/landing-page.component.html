@@ -1,0 +1,219 @@
+<!-- Banner section -->
+<section class="banner">
+    <div id="carouselIndicators" class="carousel slide" data-ride="carousel" >
+      <ol class="carousel-indicators">
+        <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 hero-caption">
+                        <h1 class="hero-caption-title text-md-center text-center"> Shop and Share with Friends</h1>
+                        <button mat-raised-button color="primary" (click)="navigateCollections()">
+                            <mat-icon>shopping_cart</mat-icon>
+                             Shop Now
+                        </button>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="../../../assets/heroImage1.svg" class="d-block w-100" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="../../../assets/heroImage2.svg" class="d-block w-100" alt="">
+                    </div>
+                    <div class="col-md-6 hero-caption">
+                        <h1 class="hero-caption-title text-md-center text-center">Effortless Shopping</h1>
+                        <button mat-raised-button color="primary" (click)="navigateCollections()">
+                            <mat-icon>shopping_cart</mat-icon>
+                             Shop Now
+                        </button>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 hero-caption">
+                        <h1 class="hero-caption-title text-md-center text-center">We Got All You Need</h1>
+                        <button mat-raised-button color="primary" (click)="navigateCollections()">
+                            <mat-icon>shopping_cart</mat-icon>
+                             Shop Now
+                        </button>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="../../../assets/heroImage3.svg" class="d-block w-100" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+      <a href="#carouselIndicators" class="carousel-control-prev" role="button" data-slide="prev" >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only"></span>
+      </a>
+      <a href="#carouselIndicators" class="carousel-control-next" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only"></span>
+      </a>
+    </div>
+  </section>
+  
+<!-- Hot collections section -->
+<section class="hotCollections">
+    <div class="container">
+    <h1 class="text-center">Hot Collections</h1>
+    <hr class="titleLineBar">
+    <div class="row">
+        <div class="col-md-3">
+            <mat-card class="mb-5 hoverShadow" (click)="toProduct()">
+            <img class="productImage" src="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-product-5_large.png?format=jpg&quality=90&v=1530129458" alt="">
+            <mat-card-content>
+                <h3 class="text-center product-name">Product 1</h3>
+                <h5 class="text-center product-price">P100.00</h5 >
+            </mat-card-content>
+            </mat-card>
+        </div>
+        <div class="col-md-3">
+            <mat-card class="mb-5 hoverShadow">
+            <img class="productImage" src="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-product-6_large.png?format=jpg&quality=90&v=1530129477" alt="">
+            <mat-card-content>
+                <h3 class="text-center product-name">Product 2</h3>
+                <h5 class="text-center product-price">P100.00</h5 >
+            </mat-card-content>
+            </mat-card>
+        </div>
+        <div class="col-md-3">
+            <mat-card class="mb-5 hoverShadow">
+            <img class="productImage" src="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-product-1_large.png?format=jpg&quality=90&v=1530129292" alt="">
+            <mat-card-content>
+                <h3 class="text-center product-name">Product 3</h3>
+                <h5 class="text-center product-price">P100.00</h5 >
+            </mat-card-content>
+            </mat-card>
+        </div>
+        <div class="col-md-3">
+            <mat-card class="mb-5 hoverShadow">
+            <img class="productImage" src="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-product-3_large.png?format=jpg&quality=90&v=1530129341" alt="">
+            <mat-card-content>
+                <h3 class="text-center product-name">Product 4</h3>
+                <h5 class="text-center product-price">P100.00</h5 >
+            </mat-card-content>
+            </mat-card>
+        </div>
+        <div class="col-md-3">
+            <mat-card class="mb-5 hoverShadow">
+            <img class="productImage" src="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-product-5_large.png?format=jpg&quality=90&v=1530129458" alt="">
+            <mat-card-content>
+                <h3 class="text-center product-name">Product 5</h3>
+                <h5 class="text-center product-price">P100.00</h5 >
+            </mat-card-content>
+            </mat-card>
+        </div>
+        <div class="col-md-3">
+            <mat-card class="mb-5 hoverShadow">
+            <img class="productImage" src="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-product-6_large.png?format=jpg&quality=90&v=1530129477" alt="">
+            <mat-card-content>
+                <h3 class="text-center product-name">Product 6</h3>
+                <h5 class="text-center product-price">P100.00</h5 >
+            </mat-card-content>
+            </mat-card>
+        </div>
+        <div class="col-md-3">
+            <mat-card class="mb-5 hoverShadow">
+            <img class="productImage" src="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-product-1_large.png?format=jpg&quality=90&v=1530129292" alt="">
+            <mat-card-content>
+                <h3 class="text-center product-name">Product 7</h3>
+                <h5 class="text-center product-price">P100.00</h5 >
+            </mat-card-content>
+            </mat-card>
+        </div>
+        <div class="col-md-3">
+            <mat-card class="mb-5 hoverShadow">
+            <img class="productImage" src="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-product-3_large.png?format=jpg&quality=90&v=1530129341" alt="">
+            <mat-card-content>
+                <h3 class="text-center product-name">Product 8</h3>
+                <h5 class="text-center product-price">P100.00</h5 >
+            </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+    <button class="seeMoreBtn" mat-raised-button color="primary" (click)="navigateCollections()">View collections</button>
+    </div>
+</section>
+  
+<!-- Categories Section -->
+<section class="categories">
+    <div class="container">
+        <h1 class="text-center">Categories</h1>
+        <hr class="titleLineBar">
+        <div class="row">
+        
+        <div class="col-md-4">
+            <mat-card class="mb-5 hoverShadow">
+            <img class="productImage" src="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-product-5_large.png?format=jpg&quality=90&v=1530129458" alt="">
+            <mat-card-content>
+                <h5 class="text-center">Category 1</h5>
+            </mat-card-content>
+            </mat-card>
+        </div>
+        <div class="col-md-4">
+            <mat-card class="mb-5 hoverShadow">
+            <img class="productImage" src="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-product-5_large.png?format=jpg&quality=90&v=1530129458" alt="">
+            <mat-card-content>
+                <h5 class="text-center">Category 2</h5>
+            </mat-card-content>
+            </mat-card>
+        </div>
+        <div class="col-md-4">
+            <mat-card class="mb-5 hoverShadow">
+            <img class="productImage" src="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-product-5_large.png?format=jpg&quality=90&v=1530129458" alt="">
+            <mat-card-content>
+                <h5 class="text-center">Category 3</h5>
+            </mat-card-content>
+            </mat-card>
+        </div>
+        <div class="col-md-4">
+            <mat-card class="mb-5 hoverShadow">
+            <img class="productImage" src="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-product-3_large.png?format=jpg&quality=90&v=1530129341" alt="">
+            <mat-card-content>
+                <h5 class="text-center">Category 4</h5>
+            </mat-card-content>
+            </mat-card>
+        </div>
+        <div class="col-md-4">
+            <mat-card class="mb-5 hoverShadow">
+            <img class="productImage" src="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-product-3_large.png?format=jpg&quality=90&v=1530129341" alt="">
+            <mat-card-content>
+                <h5 class="text-center">Category 5</h5>
+            </mat-card-content>
+            </mat-card>
+        </div>
+        <div class="col-md-4">
+            <mat-card class="mb-5 hoverShadow">
+            <img class="productImage" src="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-product-3_large.png?format=jpg&quality=90&v=1530129341" alt="">
+            <mat-card-content>
+                <h5 class="text-center">Category 6</h5>
+            </mat-card-content>
+            </mat-card>
+        </div>
+        <button class="seeMoreBtn" mat-raised-button color="primary" (click)="navigateCollections()">View collections</button>
+        </div>
+    </div>
+</section>
+  
+<!-- Testimonials Section -->
+<section class="testimonials">
+    <h3 class="text-center">Testimonials</h3>
+    <hr class="titleLineBar">
+    <div class="jumbotron jumbotron-fluid"></div>
+</section>

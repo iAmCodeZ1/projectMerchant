@@ -1,0 +1,31 @@
+/* Footer Section */
+
+.titleLineBar {
+    border: 1px solid;
+    width: 50px;
+}
+
+.footerContent {
+    background-color: #3f51b5;
+    height: 600px;
+    margin: 50px 0 0 0;
+    width: 100%;
+    color:#fff;
+}
+
+.footerContent .container .row .col-md-6 {
+    margin-top: 50px;
+}
+
+footer mat-card {
+    padding: 5px;
+}
+
+footer mat-card img {
+    width: 100%;
+}
+
+.socialIcon {
+    width: 30px;
+    margin: 10px;
+}

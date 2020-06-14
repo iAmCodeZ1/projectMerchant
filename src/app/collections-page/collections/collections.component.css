@@ -1,0 +1,43 @@
+/* Global Styling */
+
+.titleLineBar {
+    border: 1px solid;
+    width: 50px;
+}
+
+.seeMoreBtn {
+    margin: 0 auto;
+    display: block;
+}
+
+.hoverShadow:hover, .mat-raised-button:hover {
+    box-shadow: 0 10px 16px rgba(0, 0, 0, 0.2);
+}
+
+.hoverShadow {
+    cursor: pointer;
+}
+
+.mat-button, .mat-raised-button {
+    outline: none;
+}
+
+/* Hot collections section */
+
+.hotCollections .container {
+    margin: 30px auto;
+}
+
+.productImage {
+    width: 100%;
+}
+
+.hotCollections .container .row {
+    margin-top: 50px;
+}
+
+/* Categories Section */
+
+.categories .container {
+    margin: 30px auto;
+}

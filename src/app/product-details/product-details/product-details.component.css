@@ -1,0 +1,29 @@
+.product-container {
+    padding: 4rem 0;
+}
+
+/* Carousel Image Section */
+
+.product-image {
+    width: 100%;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    height: 3rem;
+    width: 2rem;
+    background-color: grey;
+    position: absolute;
+    top: 50%;
+}
+
+.carousel-indicators li {
+    background-color: grey;
+}
+
+/* Product Copy Writing Section */
+
+pre {
+    margin: 1em 0;
+    white-space: pre-wrap;
+    font-family: inherit;
+}

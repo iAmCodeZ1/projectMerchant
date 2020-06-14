@@ -1,0 +1,27 @@
+.contact-us-container {
+    margin: 4rem auto;
+}
+
+.title-text {
+    font-weight: 500;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    letter-spacing: .2rem;
+}
+
+.subtitle-text {
+    letter-spacing: .1rem;
+    margin-bottom: 2rem;
+}
+
+.mat-form-field {
+    width: 100%;
+}
+
+.contact-us-image {
+    width: 100%;
+}
+
+.image-container {
+    margin-top: 3rem;
+}

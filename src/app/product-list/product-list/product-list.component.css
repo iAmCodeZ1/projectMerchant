@@ -1,0 +1,33 @@
+/* Global styling */
+
+.hoverShadow:hover, .mat-raised-button:hover {
+    box-shadow: 0 10px 16px rgba(0, 0, 0, 0.2);
+}
+
+.hoverShadow {
+    cursor: pointer;
+}
+
+.mat-button, .mat-raised-button {
+    outline: none;
+}
+
+.productImage {
+    width: 100%;
+}
+
+/* Product section */
+
+.product-name {
+    font-size: 1.2rem;
+}
+
+.product-details {
+    color: #828282;
+}
+
+.product-price {
+    color: #FF5D5D;
+    font-weight: 500;
+    float: right;
+}
