@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/merchantWebApp",
+            "outputPath": "dist/",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -63,18 +63,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "merchantWebApp:build"
+            "browserTarget": "merchant-web-app:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "merchantWebApp:build:production"
+              "browserTarget": "merchant-web-app:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "merchantWebApp:build"
+            "browserTarget": "merchant-web-app:build"
           }
         },
         "test": {
@@ -112,18 +112,18 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "merchantWebApp:serve"
+            "devServerTarget": "merchant-web-app:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "merchantWebApp:serve:production"
+              "devServerTarget": "merchant-web-app:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "merchantWebApp",
+  "defaultProject": "merchant-web-app",
   "cli": {
     "analytics": "adb8732b-e92c-4c77-b8f8-651f72796425"
   }

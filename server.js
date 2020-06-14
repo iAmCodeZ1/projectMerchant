@@ -17,6 +17,6 @@ app.use(bodyParser.json());
 
 app.use('/products-list', productList);
 
-app.get('/*', (req, res) => res.sendFile(path.join(__dirname, 'dist/merchantWebApp/index.html')));
+app.get('/*', (req, res) => res.sendFile(path.join(__dirname, 'dist/merchant-web-app/index.html')));
 
 app.listen(port, () => console.log("Server running in port: " + port));
