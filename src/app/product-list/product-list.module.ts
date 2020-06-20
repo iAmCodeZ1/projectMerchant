@@ -12,7 +12,7 @@ import { ProductListComponent } from './product-list/product-list.component';
   imports: [
     CommonModule,
     ProductListRoutingModule,
-    MaterialModule
+    MaterialModule,
   ]
 })
 export class ProductListModule { }

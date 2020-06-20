@@ -14,95 +14,95 @@
     </div>
 
     <!-- Product section -->
-    <div class="row">
-        <div class="col-md-3">
-            <mat-card class="mb-5 hoverShadow" (click)="navigateProductDetails()">
-                <img class="productImage" src="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-product-5_large.png?format=jpg&quality=90&v=1530129458" alt="">
-                <mat-card-content>
-                    <span class="product-name">Product 1</span>
-                    <span class="product-price">P100.00</span>
-                    <hr>
-                    <p class="product-details">Lorem ipsum dolor sit amet</p>
-                </mat-card-content>
-            </mat-card>
+        <div class="row">
+            <div class="col-md-3" *ngFor="let product of products">
+                <mat-card class="mb-5 hoverShadow" (click)="navigateProductDetails()">
+                    <img class="productImage" src="https://merchant-web.herokuapp.com/products-list/images/{{ product.image }}" alt="">
+                    <mat-card-content>
+                        <span class="product-name"> {{product.productName}} </span>
+                        <span class="product-price"> {{product.srp}} </span>
+                        <hr>
+                        <p class="product-details"> {{product.desc}} </p>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+            <div class="col-md-3">
+                <mat-card class="mb-5 hoverShadow">
+                    <img class="productImage" src="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-product-5_large.png?format=jpg&quality=90&v=1530129458" alt="">
+                    <mat-card-content>
+                        <span class="product-name">Product 2</span>
+                        <span class="product-price">P100.00</span>
+                        <hr>
+                        <p class="product-details">Lorem ipsum dolor sit amet</p>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+            <div class="col-md-3">
+                <mat-card class="mb-5 hoverShadow">
+                    <img class="productImage" src="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-product-5_large.png?format=jpg&quality=90&v=1530129458" alt="">
+                    <mat-card-content>
+                        <span class="product-name">Product 3</span>
+                        <span class="product-price">P100.00</span>
+                        <hr>
+                        <p class="product-details">Lorem ipsum dolor sit amet</p>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+            <div class="col-md-3">
+                <mat-card class="mb-5 hoverShadow">
+                    <img class="productImage" src="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-product-5_large.png?format=jpg&quality=90&v=1530129458" alt="">
+                    <mat-card-content>
+                        <span class="product-name">Product 4</span>
+                        <span class="product-price">P100.00</span>
+                        <hr>
+                        <p class="product-details">Lorem ipsum dolor sit amet</p>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+            <div class="col-md-3">
+                <mat-card class="mb-5 hoverShadow">
+                    <img class="productImage" src="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-product-5_large.png?format=jpg&quality=90&v=1530129458" alt="">
+                    <mat-card-content>
+                        <span class="product-name">Product 5</span>
+                        <span class="product-price">P100.00</span>
+                        <hr>
+                        <p class="product-details">Lorem ipsum dolor sit amet</p>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+            <div class="col-md-3">
+                <mat-card class="mb-5 hoverShadow">
+                    <img class="productImage" src="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-product-5_large.png?format=jpg&quality=90&v=1530129458" alt="">
+                    <mat-card-content>
+                        <span class="product-name">Product 6</span>
+                        <span class="product-price">P100.00</span>
+                        <hr>
+                        <p class="product-details">Lorem ipsum dolor sit amet</p>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+            <div class="col-md-3">
+                <mat-card class="mb-5 hoverShadow">
+                    <img class="productImage" src="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-product-5_large.png?format=jpg&quality=90&v=1530129458" alt="">
+                    <mat-card-content>
+                        <span class="product-name">Product 6</span>
+                        <span class="product-price">P100.00</span>
+                        <hr>
+                        <p class="product-details">Lorem ipsum dolor sit amet</p>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+            <div class="col-md-3">
+                <mat-card class="mb-5 hoverShadow">
+                    <img class="productImage" src="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-product-5_large.png?format=jpg&quality=90&v=1530129458" alt="">
+                    <mat-card-content>
+                        <span class="product-name">Product 6</span>
+                        <span class="product-price">P100.00</span>
+                        <hr>
+                        <p class="product-details">Lorem ipsum dolor sit amet</p>
+                    </mat-card-content>
+                </mat-card>
+            </div>
         </div>
-        <div class="col-md-3">
-            <mat-card class="mb-5 hoverShadow">
-                <img class="productImage" src="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-product-5_large.png?format=jpg&quality=90&v=1530129458" alt="">
-                <mat-card-content>
-                    <span class="product-name">Product 2</span>
-                    <span class="product-price">P100.00</span>
-                    <hr>
-                    <p class="product-details">Lorem ipsum dolor sit amet</p>
-                </mat-card-content>
-            </mat-card>
-        </div>
-        <div class="col-md-3">
-            <mat-card class="mb-5 hoverShadow">
-                <img class="productImage" src="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-product-5_large.png?format=jpg&quality=90&v=1530129458" alt="">
-                <mat-card-content>
-                    <span class="product-name">Product 3</span>
-                    <span class="product-price">P100.00</span>
-                    <hr>
-                    <p class="product-details">Lorem ipsum dolor sit amet</p>
-                </mat-card-content>
-            </mat-card>
-        </div>
-        <div class="col-md-3">
-            <mat-card class="mb-5 hoverShadow">
-                <img class="productImage" src="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-product-5_large.png?format=jpg&quality=90&v=1530129458" alt="">
-                <mat-card-content>
-                    <span class="product-name">Product 4</span>
-                    <span class="product-price">P100.00</span>
-                    <hr>
-                    <p class="product-details">Lorem ipsum dolor sit amet</p>
-                </mat-card-content>
-            </mat-card>
-        </div>
-        <div class="col-md-3">
-            <mat-card class="mb-5 hoverShadow">
-                <img class="productImage" src="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-product-5_large.png?format=jpg&quality=90&v=1530129458" alt="">
-                <mat-card-content>
-                    <span class="product-name">Product 5</span>
-                    <span class="product-price">P100.00</span>
-                    <hr>
-                    <p class="product-details">Lorem ipsum dolor sit amet</p>
-                </mat-card-content>
-            </mat-card>
-        </div>
-        <div class="col-md-3">
-            <mat-card class="mb-5 hoverShadow">
-                <img class="productImage" src="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-product-5_large.png?format=jpg&quality=90&v=1530129458" alt="">
-                <mat-card-content>
-                    <span class="product-name">Product 6</span>
-                    <span class="product-price">P100.00</span>
-                    <hr>
-                    <p class="product-details">Lorem ipsum dolor sit amet</p>
-                </mat-card-content>
-            </mat-card>
-        </div>
-        <div class="col-md-3">
-            <mat-card class="mb-5 hoverShadow">
-                <img class="productImage" src="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-product-5_large.png?format=jpg&quality=90&v=1530129458" alt="">
-                <mat-card-content>
-                    <span class="product-name">Product 6</span>
-                    <span class="product-price">P100.00</span>
-                    <hr>
-                    <p class="product-details">Lorem ipsum dolor sit amet</p>
-                </mat-card-content>
-            </mat-card>
-        </div>
-        <div class="col-md-3">
-            <mat-card class="mb-5 hoverShadow">
-                <img class="productImage" src="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-product-5_large.png?format=jpg&quality=90&v=1530129458" alt="">
-                <mat-card-content>
-                    <span class="product-name">Product 6</span>
-                    <span class="product-price">P100.00</span>
-                    <hr>
-                    <p class="product-details">Lorem ipsum dolor sit amet</p>
-                </mat-card-content>
-            </mat-card>
-        </div>
-    </div>
 
 </div>

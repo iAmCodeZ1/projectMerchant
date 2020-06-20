@@ -2,8 +2,15 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
 const mongoose = require('mongoose');
+const cors = require('cors');
 
 const app = express();
+
+// CONFIGURE CORS
+    app.use(cors({
+        origin: ['http://localhost:4200', 'https://127.0.0.1:4200'],
+        credentials: true
+    }));
 
 // IMPORTED ROUTES
     const productList = require('./server/routes/products-routes/products-list');

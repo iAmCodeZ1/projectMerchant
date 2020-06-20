@@ -12,9 +12,10 @@ const upload = multer({storage});
 
 const Product = require('../../models/product');
 
-let gfs;
+// INITIALIZATION OF gfs VARIABLE
+    let gfs;
 
-// Test db connection
+// CONNECTION TO MONGO DB
     let conn = mongoose.createConnection(url, {
         useNewUrlParser: true,
         useUnifiedTopology: true
@@ -32,6 +33,18 @@ let gfs;
                 res.status(400).json(err);
             } else {
                 res.status(200).json(products);
+            }
+        });
+    });
+
+// GET SINGLE PRODUCT
+    router.get('/:id', (req, res) => {
+        Product.findById(req.params.id, (err, foundProduct) => {
+            if(err) {
+                console.log(err);
+                res.status(404).json({err: err});
+            } else {
+                res.status(200).json(foundProduct);
             }
         });
     });
@@ -58,8 +71,8 @@ let gfs;
         });
     });
 
-// @TEST Get IMAGE
-    router.get('/image/:filename', (req, res) => {
+// GET IMAGE FROM DATABASE
+    router.get('/images/:filename', (req, res) => {
         gfs.files.findOne({filename: req.params.filename}, (err, file) => {
             if(err) {
                 console.log(err);
