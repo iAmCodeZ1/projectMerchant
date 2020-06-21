@@ -15,7 +15,7 @@
     <!-- Product section -->
         <div class="row">
             <div class="col-md-3" *ngFor="let product of products">
-                <mat-card class="mb-5 hoverShadow" (click)="navigateProductDetails()">
+                <mat-card class="mb-5 hoverShadow" (click)="navigateProductDetails($event, product._id)">
                     <img mat-card-image class="productImage" src="https://merchant-web.herokuapp.com/products-list/images/{{ product.image }}" alt="">
                     <mat-card-title class="product-name">{{product.productName | ellipsis: 20}}</mat-card-title>
                     <mat-card-subtitle class="product-price">₱{{product.srp}}</mat-card-subtitle>

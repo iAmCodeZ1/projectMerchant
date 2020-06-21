@@ -28,8 +28,8 @@ export class ProductListComponent implements OnInit {
     }
 
   // NAVIGATE TO PRODUCT DETAILS
-    navigateProductDetails() {
-      this.router.navigate(['/product-details']);
+    navigateProductDetails(event, id) {
+      this.router.navigate(['/product-list' + '/' + id]);
     }
 
 

@@ -47,10 +47,6 @@
         width: 100%;
     }
 
-    /* .product-name {
-
-    } */
-
     .product-price {
         color: #828282;
     }
@@ -78,19 +74,13 @@
     @media only screen and (max-width: 600px) {
         /* Banner Section */
             .carousel-inner .carousel-item .container {
-                padding-top: 3rem;
+                padding-top: 2rem;
                 max-height: 400px;
             }
             .hero-caption {
-                padding: 0;
-            }
-            .hero-caption-title {
                 display: none;
             }
-            .hero-caption .mat-raised-button {
-                /* padding: .3rem 1.8rem; */
-                display: none;
-            }
+            
     }
     
     /* Small devices (portrait tablets and large phones, 600px and up) */
