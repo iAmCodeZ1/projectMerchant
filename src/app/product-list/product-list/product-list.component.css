@@ -27,16 +27,11 @@
         color: #FF5D5D;
         font-weight: 500;
     }
-    mat-card:empty {
+
+    .productImage:empty {
+        /* background-color: #cccccc; */
+        background: linear-gradient(to right, #4e54c8, #8f94fb);
         height: 200px;
-        width: 250px;
-        background-image: radial-gradient(circle 20px, #ccc 100%, transparent),
-            linear-gradient(#ccc, #ccc),
-            linear-gradient(#ccc, #ccc),
-            linear-gradient(#f1f1f1, #f1f1f1);
-        background-size: 48px 48px, 190px 40px, 190px 20px, 100% 100%;
-        background-position: 50% 24px, 15px 140px, 15px 200px, 0 0;
-        background-repeat: no-repeat;
     }
 
 /* MEDIA ONLY SCREEN SECTION */
