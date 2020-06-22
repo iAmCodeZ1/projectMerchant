@@ -7,6 +7,7 @@ import { MatCardModule } from '@angular/material/card';
 import {MatIconModule } from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 
 
@@ -19,7 +20,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MatCardModule,
     MatIconModule,
     MatInputModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatProgressSpinnerModule
   ],
   exports: [
     MatToolbarModule,
@@ -27,7 +29,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MatCardModule,
     MatIconModule,
     MatInputModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatProgressSpinnerModule
   ]
 })
 export class MaterialModule { }

@@ -61,6 +61,10 @@
         margin: 30px auto;
     }
 
+    .categories .container .row {
+        margin-top: 50px;
+    }
+
 /* Testimonials Section */
 
     .testimonials .jumbotron {

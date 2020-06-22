@@ -10,6 +10,8 @@ import { ProductsService } from 'src/app/services/products.service';
 export class ProductListComponent implements OnInit {
 
   products: any;
+  isSpinnerActive = true;
+
 
   constructor(
     private router: Router,
@@ -23,6 +25,7 @@ export class ProductListComponent implements OnInit {
   // GET ALL PRODUCTS FROM SERVICES
     reloadProducts() {
       this.productsService.getProducts().subscribe(resProducts => {
+        this.isSpinnerActive = false;
         this.products = resProducts;
       });
     }
