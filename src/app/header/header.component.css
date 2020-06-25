@@ -1,4 +1,20 @@
-
+/* GLOBAL STYLE */
+    .navbar {
+        background: linear-gradient(to right, #190B48, #280F7D);
+        padding: 30px;
+    }
+    .navbar-brand {
+        color: #D0098D;
+    }
+    .nav-link {
+        font-size: 1.2rem;
+        color: #fff !important;
+        margin: auto 10px;
+        transition: all 0.3s linear;
+    }
+    a.nav-link.active, a.nav-link:hover {
+        color: #6DE0F6 !important;
+    }
 
 /* MEDIA ONLY SCREEN SECTION */
 

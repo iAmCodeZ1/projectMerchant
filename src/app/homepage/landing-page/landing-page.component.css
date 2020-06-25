@@ -1,6 +1,6 @@
 /* Global Styling */
     .titleLineBar {
-        border: 1px solid;
+        border: 2px solid #6DE0F6;
         width: 50px;
     }
     .seeMoreBtn {
@@ -16,13 +16,47 @@
     .mat-button, .mat-raised-button {
         outline: none;
     }
+    /* BUTTON STYLES */
+        .primary-btn-shadow {
+            background-color: #D0098D;
+            border-radius: 25px;
+            box-shadow: rgba(208, 9, 141, 0.36) 0px 5px 25px 5px;
+        }
+        .primary-btn-shadow:hover {
+            background-color: #d654ab !important;
+            box-shadow: rgba(208, 9, 141, 0.36) 0px 5px 25px 5px;
+        }
+        .primary-btn {
+            background-color: #D0098D;
+            border-radius: 25px;
+            padding: 5px 15px;
+        }
+        .primary-btn span {
+            padding: 20px;
+        }
+        .primary-btn:hover {
+            background-color: #d654ab !important;
+        }
+    .section-title {
+        color: #190B48;
+    }
 
 /* Banner Section */
+
+    .banner {
+        background: linear-gradient(to right, #190B48, #280F7D);
+    }
     .carousel-inner .carousel-item .container {
         padding-top: 6rem;
     }
     .hero-caption {
         padding: 6rem 0 6rem 6rem;
+    }
+    .hero-caption-title {
+        color: #6DE0F6;
+    }
+    .white-highlight {
+        color: #fff;
     }
     .hero-caption-title {
         font-weight: 400;
@@ -35,7 +69,6 @@
     .hero-caption .mat-raised-button {
         padding: .3rem 1.8rem;
     }
-
 
 /* Hot collections section */
 
