@@ -4,7 +4,8 @@ import { LandingPageComponent } from './homepage/landing-page/landing-page.compo
 
 
 const routes: Routes = [
-  { path: '', component: LandingPageComponent },
+  { path: '', pathMatch: 'full', redirectTo: 'home' },
+  { path: 'home', component: LandingPageComponent },
   { path: 'collections', loadChildren: () => import('./collections-page/collections-page.module').then(m => m.CollectionsPageModule) },
   { path: 'product-list', loadChildren: () => import('./product-list/product-list.module').then(m => m.ProductListModule) },
   { path: 'product-details', loadChildren: () => import('./product-details/product-details.module').then(m => m.ProductDetailsModule) },

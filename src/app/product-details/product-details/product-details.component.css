@@ -1,3 +1,8 @@
+.product-title, .product-price,
+.product-desc, .product-copywrite {
+    color: #190B48;
+}
+
 .product-container {
     padding: 4rem 0;
 }

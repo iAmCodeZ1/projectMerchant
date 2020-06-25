@@ -3,8 +3,11 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const compression = require('compression');
 
 const app = express();
+
+app.use(compression());
 
 // CONFIGURE CORS
     app.use(cors({

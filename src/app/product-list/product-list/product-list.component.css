@@ -19,6 +19,7 @@
 /* Product section */
     .product-name {
         font-size: 1.2rem;
+        color: #190B48;
     }
     .product-details {
         color: #828282;
@@ -30,7 +31,7 @@
 
     .productImage:empty {
         /* background-color: #cccccc; */
-        background: linear-gradient(to right, #4e54c8, #8f94fb);
+        background: linear-gradient(to right, #190B48, #280F7D);
         height: 200px;
     }
 
