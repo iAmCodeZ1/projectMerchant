@@ -10,6 +10,8 @@
 /* Carousel Image Section */
     .product-image {
         width: 100%;
+        max-width: 1000px;
+        max-height: 1000px;
     }
     .carousel-control-prev, .carousel-control-next {
         height: 3rem;

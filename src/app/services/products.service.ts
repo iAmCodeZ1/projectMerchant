@@ -1,15 +1,18 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Product } from '../models/product';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductsService {
 
-  // url = 'http://localhost:3000/products-list';
-  url = 'products-list';
+  url = 'http://localhost:3000/products-list';
+  // url = 'products-list';
 
-  constructor(private http: HttpClient) { }
+  constructor(
+    private http: HttpClient,
+    ) { }
 
   // GET ALL PRODUCTS
     getProducts() {
@@ -21,4 +24,8 @@ export class ProductsService {
       return this.http.get(this.url + '/' + id);
     }
 
+  // POST NEW PRODUCT
+    createProduct(product: Product) {
+      return this.http.post(this.url, product);
+    }
 }

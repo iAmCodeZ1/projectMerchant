@@ -58,7 +58,7 @@ const Product = require('../../models/product');
             desc: req.body.desc,
             image: req.file.filename
         });
-
+        
         Product.create(newProduct, (err, product) => {
             if(err) {
                 console.log(err);
@@ -66,7 +66,7 @@ const Product = require('../../models/product');
             } else {
                 product.save();
                 console.log('New product added: ' + product);
-                res.status(200).json();
+                res.status(200).json({message: 'Prouct uploaded successfully.'});
             }
         });
     });

@@ -1,0 +1,24 @@
+.container {
+    margin-top: 30px;
+    width: 50%;
+}
+
+mat-form-field {
+    width: 100%;
+}
+
+.primary-btn-shadow {
+    background-color: #D0098D;
+    border-radius: 25px;
+    /* box-shadow: rgba(208, 9, 141, 0.36) 0px 5px 25px 5px; */
+    color: #fff;
+    width: 100%;
+    height: 3rem;
+}
+.primary-btn-shadow:hover {
+    background-color: #d654ab !important;
+    /* box-shadow: rgba(208, 9, 141, 0.36) 0px 5px 25px 5px; */
+}
+.primary-btn-shadow:focus {
+    outline: none;
+}
