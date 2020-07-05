@@ -5,10 +5,11 @@ import { ProductPageRoutingModule } from './product-page-routing.module';
 import { NewProdComponent } from './new-prod/new-prod.component';
 import { MaterialModule } from 'src/app/material/material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { InventoryComponent } from './inventory/inventory.component';
 
 
 @NgModule({
-  declarations: [NewProdComponent],
+  declarations: [NewProdComponent, InventoryComponent],
   imports: [
     CommonModule,
     ProductPageRoutingModule,

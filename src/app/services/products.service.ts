@@ -28,4 +28,9 @@ export class ProductsService {
     createProduct(product: Product) {
       return this.http.post(this.url, product);
     }
+
+  // DELETE PRODUCT BY ID
+    deleteProduct(id: String) {
+      return this.http.delete<void>(this.url + '/' + id);
+    }
 }

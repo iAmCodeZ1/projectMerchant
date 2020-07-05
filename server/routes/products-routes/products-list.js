@@ -62,11 +62,24 @@ const Product = require('../../models/product');
         Product.create(newProduct, (err, product) => {
             if(err) {
                 console.log(err);
-                res.status(400).json(err);
+                res.status(400).json({message: err.message});
             } else {
                 product.save();
                 console.log('New product added: ' + product);
                 res.status(200).json({message: 'Prouct uploaded successfully.'});
+            }
+        });
+    });
+
+// DELETE PRODUCT
+    router.delete('/:id', (req, res) => {
+        Product.findByIdAndRemove(req.params.id, (err) => {
+            if(err) {
+                console.log(err);
+                res.status(500).json(err);
+            } else {
+                console.log('Successfully deleted a record.');
+                res.status(200).json({message: 'Successfully deleted a record.'});
             }
         });
     });

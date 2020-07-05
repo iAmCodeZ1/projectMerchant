@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ProductsService } from 'src/app/services/products.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { InventoryComponent } from '../inventory/inventory.component';
 
 @Component({
   selector: 'app-new-prod',
@@ -8,6 +9,10 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
   styleUrls: ['./new-prod.component.css']
 })
 export class NewProdComponent implements OnInit {
+
+  @ViewChild(InventoryComponent) inventory;
+
+  public imageFileName: String = 'Select file';
 
   constructor(
     public productsService: ProductsService
@@ -21,19 +26,27 @@ export class NewProdComponent implements OnInit {
       this.productForm.patchValue({
         imageSource: event
       });
+      this.imageFileName = event.name;
     }
 
   onSubmit() {
     // Construct formData from productForm
       const formData = new FormData();
-
       formData.append('productName', this.productForm.get('productName').value);
       formData.append('srp', this.productForm.get('srp').value);
       formData.append('discountedPrice', this.productForm.get('discountedPrice').value);
       formData.append('desc', this.productForm.get('desc').value);
       formData.append('image', this.productForm.get('imageSource').value);
 
-    this.productsService.createProduct(formData).subscribe(data => {console.log(data)});
+    this.productsService.createProduct(formData).subscribe(res => {
+      console.log(res);
+      this.reloadProducts();
+    });
+    
+  }
+
+  reloadProducts() {
+    this.inventory.reloadProducts();
   }
 
 

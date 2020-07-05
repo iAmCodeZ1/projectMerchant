@@ -1,0 +1,24 @@
+<mat-accordion>
+    <mat-expansion-panel *ngFor="let product of products">
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                #{{product?._id.slice(19,25) | uppercase}}
+            </mat-panel-title>
+            <mat-panel-description>
+                {{product?.productName}}
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+        <div class="row">
+            <div class="col-md-6">
+                <p>SRP: {{product?.srp}}</p>                
+                <p>DP: {{product?.discountedPrice}}</p>                
+                <p>Descriptions: {{product?.desc}}  </p>                
+            </div>
+            <div class="col-md-6">
+                Image goes here...
+            </div>
+            <button mat-raised-button color="primary">Edit</button>
+            <button mat-raised-button color="accent" (click)="onDelete(product._id)">Delete</button>
+        </div>
+    </mat-expansion-panel>
+</mat-accordion>
