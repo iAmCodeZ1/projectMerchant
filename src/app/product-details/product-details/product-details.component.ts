@@ -11,9 +11,9 @@ export class ProductDetailsComponent implements OnInit {
 
   public id: String = this.activatedRoute.snapshot.params['id'];
   public product: any;
+  public discountPerc: any;
 
   constructor(
-    private route: Router,
     private activatedRoute: ActivatedRoute,
     private productsService: ProductsService
   ) { }
@@ -23,7 +23,9 @@ export class ProductDetailsComponent implements OnInit {
   }
 
   getProductDetails() {
-    this.productsService.getProductDetails(this.id).subscribe(resProduct => this.product = resProduct);
+    this.productsService.getProductDetails(this.id).subscribe(resProduct => {
+      this.product = resProduct;
+      this.discountPerc = this.productsService.getDiscountPerc(this.product.srp, this.product.discountedPrice);
+    });
   }
-
 }

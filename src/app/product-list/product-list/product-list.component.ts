@@ -12,7 +12,6 @@ export class ProductListComponent implements OnInit {
   products: any;
   isSpinnerActive = true;
 
-
   constructor(
     private router: Router,
     private productsService: ProductsService
@@ -34,7 +33,4 @@ export class ProductListComponent implements OnInit {
     navigateProductDetails(event, id) {
       this.router.navigate(['/product-list' + '/' + id]);
     }
-
-
-
 }

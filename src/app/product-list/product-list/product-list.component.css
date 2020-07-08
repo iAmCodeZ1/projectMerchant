@@ -34,6 +34,11 @@
         background: linear-gradient(to right, #190B48, #280F7D);
         height: 200px;
     }
+    .productSRP {
+        color: #828282;
+        text-decoration: line-through;
+        font-size: .8rem;
+    }
 
 /* MEDIA ONLY SCREEN SECTION */
 

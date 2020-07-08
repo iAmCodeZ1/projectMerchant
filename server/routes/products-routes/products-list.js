@@ -6,7 +6,8 @@ const GridFsStorage = require('multer-gridfs-storage');
 const Grid = require('gridfs-stream');
 const url = 'mongodb+srv://n3m0:spartan13@cluster0-ofxcy.mongodb.net/Merchant?retryWrites=true&w=majority';
 
-const storage = new GridFsStorage({url});
+// CREATE STORAGE ENGINE
+    const storage = new GridFsStorage({url});
 
 const upload = multer({storage});
 
@@ -21,9 +22,7 @@ const Product = require('../../models/product');
         useUnifiedTopology: true
     });
     
-    conn.once('open', () => {
-        gfs = Grid(conn.db, mongoose.mongo);
-    });
+    conn.once('open', () => gfs = Grid(conn.db, mongoose.mongo));
 
 // GET ALL PRODUCTS FROM LIST
     router.get('/', (req, res) => {
@@ -73,15 +72,30 @@ const Product = require('../../models/product');
 
 // DELETE PRODUCT
     router.delete('/:id', (req, res) => {
-        Product.findByIdAndRemove(req.params.id, (err) => {
+
+        Product.findById(req.params.id, (err, foundProduct) => {
             if(err) {
                 console.log(err);
-                res.status(500).json(err);
-            } else {
-                console.log('Successfully deleted a record.');
-                res.status(200).json({message: 'Successfully deleted a record.'});
+            } else  {
+                gfs.remove({filename: foundProduct.image}, (err) => {
+                    if(err) {
+                        console.log(err);
+                        res.status(500).json(err);
+                    } else {
+                        // Find product and delete
+                            Product.findByIdAndRemove(req.params.id, (err) => {
+                                if(err) {
+                                    console.log(err);
+                                    res.status(500).json(err);
+                                } else {
+                                    res.status(200).json({message: 'Successfully deleted a record.'});
+                                }
+                            });
+                    }
+                });
             }
         });
+
     });
 
 // GET IMAGE FROM DATABASE

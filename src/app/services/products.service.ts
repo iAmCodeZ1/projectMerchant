@@ -7,8 +7,8 @@ import { Product } from '../models/product';
 })
 export class ProductsService {
 
-  url = 'http://localhost:3000/products-list';
-  // url = 'products-list';
+  // url = 'http://localhost:3000/products-list';
+  url = 'products-list';
 
   constructor(
     private http: HttpClient,
@@ -32,5 +32,11 @@ export class ProductsService {
   // DELETE PRODUCT BY ID
     deleteProduct(id: String) {
       return this.http.delete<void>(this.url + '/' + id);
+    }
+
+  // GET DISCOUNT PERCENTAGE
+    getDiscountPerc(srp: number, dp: number) {
+      let percentage = ((srp - dp)/dp)*100;
+      return Math.round(percentage);
     }
 }
