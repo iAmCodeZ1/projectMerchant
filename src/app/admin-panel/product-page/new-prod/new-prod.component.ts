@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { ProductsService } from 'src/app/services/products.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { InventoryComponent } from '../inventory/inventory.component';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-new-prod',
@@ -15,7 +16,8 @@ export class NewProdComponent implements OnInit {
   public imageFileName: String = 'Select file';
 
   constructor(
-    public productsService: ProductsService
+    public productsService: ProductsService,
+    public matSnackBar: MatSnackBar
   ) { }
 
   ngOnInit(): void {
@@ -42,7 +44,7 @@ export class NewProdComponent implements OnInit {
       console.log(res);
       this.reloadProducts();
     });
-    
+    this.matSnackBar.open('Added new product!', 'dismiss', {duration: 2000});
   }
 
   reloadProducts() {

@@ -30,3 +30,7 @@ mat-form-field {
 #inputBtn {
     width: 200px;
 }
+
+textarea {
+    white-space: pre;
+}

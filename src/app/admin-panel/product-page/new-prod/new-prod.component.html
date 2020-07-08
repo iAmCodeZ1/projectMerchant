@@ -1,9 +1,7 @@
 <!-- NEW PRODUCT FORM SECTION -->
     <section class="container">
         <mat-card>
-            <form [formGroup]="productForm"
-                (submit)="onSubmit()"
-                enctype="multipart/form-data">
+            <form [formGroup]="productForm" enctype="multipart/form-data">
 
                 <h1 class="text-center">Upload New Product</h1>
                 <hr>
@@ -34,6 +32,7 @@
                             <textarea formControlName="desc" cols="30" rows="10" matInput placeholder="Enter product descriptions"></textarea>
                             <mat-error>Description is required</mat-error>
                         </mat-form-field>
+                        <pre></pre>
                     </div>
 
                     <div class="col-md-12">
@@ -51,7 +50,7 @@
                     </div>
 
                     <div class="col-md-12 mt-3">
-                        <button type="submit" mat-raised-button class="primary-btn-shadow" [disabled]="productForm.invalid">Submit</button>
+                        <button type="submit" mat-raised-button class="primary-btn-shadow" [disabled]="productForm.invalid" (click)="onSubmit(); productForm.reset()">Submit</button>
                     </div>
                 </div>
             </form>
